@@ -1,0 +1,382 @@
+﻿@model DingjiaHpmc.Models.ViewModels.HomeViewModel
+@{
+    ViewData["Title"] = "DINGJIA HPMC - Trang chủ";
+    Layout = "_SiteLayout";
+}
+
+<div>
+    <!-- ======= About Section ======= -->
+    <section id="about">
+        <div class="container" data-aos="fade-up">
+
+            <header class="section-header">
+                <h3 style="color: orangered">
+                    @{
+                        var cname = Model.ContentList.Find(c => c.Name.ToLower() == "companyName".ToLower());
+                        if (cname != null)
+                        {
+                            @cname.Detail
+                        }
+                        else
+                            @Html.Encode("Your company name")
+                    }
+                </h3>
+                <p><strong>Nhà sản xuất và cung cấp hóa chất công nghiệp hàng đầu</strong></p>
+            </header>
+
+            <div class="row about-container">
+                <div class="col-lg-6 content order-lg-1 order-2">
+                    <p style="text-align: justify">
+                        <span style="color: orange"><b>China Hebei Jinzhou Dingjia Chemical Group Co., Ltd. </b></span>
+                        <br />
+                        @{
+                            var about = Model.ContentList.Find(c => c.Name.ToLower() == "aboutcompany".ToLower());
+                            if (about != null)
+                            {
+                                @about.Detail
+                            }
+                            else
+                                @Html.Encode("Your company info")
+                        }
+                    </p>
+
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="bi bi-card-checklist"></i></div>
+                        <h4 class="title"><a href="">Sản phẩm chất tạo đặc</a></h4>
+                        <p style="text-align:justify" class="description">
+                            @{
+                                var intro = Model.ContentList.Find(c => c.Name.ToLower() == "introproduct".ToLower());
+                                if (intro != null)
+                                {
+                                    @intro.Detail
+                                }
+                                else
+                                    @Html.Encode("Your product intro here")
+                            }
+
+                        </p>
+                    </div>
+
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon"><i class="bi bi-brightness-high"></i></div>
+                        <h4 class="title"><a href="">Ứng dụng</a></h4>
+                        <p style="text-align: justify" class="description">
+                            @{
+                                var use = Model.ContentList.Find(c => c.Name.ToLower() == "usingproduct".ToLower());
+                                if (use != null)
+                                {
+                                    @use.Detail
+                                }
+                                else
+                                    @Html.Encode("Your product intro here")
+                            }
+
+                        </p>
+                    </div>
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon"><i class="bi bi-calendar4-week"></i></div>
+                        <h4 class="title"><a href="">Tại Việt Nam</a></h4>
+                        <p style="text-align: justify" class="description">Dingjia Chemical Group đã có mặt tại Việt Nam, Chúng tôi cam kết cung cấp cho khách hàng những sản phẩm tuyệt vời, hỗ trợ kỹ thuật và dịch vụ hậu mãi chu đáo.</p>
+                    </div>
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                        <a style="border-radius:20px" class="btn btn-outline-primary scrollto" href="#contact">Liên hệ với chúng tôi</a>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 background order-lg-2" data-aos="zoom-in">
+                    <img src="assets/img/chungchi.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+            @*
+                <div class="row about-extra">
+                <div class="col-lg-6" data-aos="fade-right">
+                <img src="assets/img/about-extra-1.svg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 pt-5 pt-lg-0" data-aos="fade-left">
+                <h4>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h4>
+                <p>
+                Ipsum in aspernatur ut possimus sint. Quia omnis est occaecati possimus ea. Quas molestiae perspiciatis occaecati qui rerum. Deleniti quod porro sed quisquam saepe. Numquam mollitia recusandae non ad at et a.
+                </p>
+                <p>
+                Ad vitae recusandae odit possimus. Quaerat cum ipsum corrupti. Odit qui asperiores ea corporis deserunt veritatis quidem expedita perferendis. Qui rerum eligendi ex doloribus quia sit. Porro rerum eum eum.
+                </p>
+                </div>
+                </div>
+
+                <div class="row about-extra">
+                <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left">
+                <img src="assets/img/about-extra-2.svg" class="img-fluid" alt="">
+                </div>
+
+                <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-right">
+                <h4>Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora facere reprehenderit.</h4>
+                <p>
+                Delectus alias ut incidunt delectus nam placeat in consequatur. Sed cupiditate quia ea quis. Voluptas nemo qui aut distinctio. Cumque fugit earum est quam officiis numquam. Ducimus corporis autem at blanditiis beatae incidunt sunt.
+                </p>
+                <p>
+                Voluptas saepe natus quidem blanditiis. Non sunt impedit voluptas mollitia beatae. Qui esse molestias. Laudantium libero nisi vitae debitis. Dolorem cupiditate est perferendis iusto.
+                </p>
+                <p>
+                Eum quia in. Magni quas ipsum a. Quis ex voluptatem inventore sint quia modi. Numquam est aut fuga mollitia exercitationem nam accusantium provident quia.
+                </p>
+                </div>
+
+                </div>
+            *@
+        </div>
+    </section><!-- End About Section -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="section-bg">
+        <div class="container" data-aos="fade-up">
+
+            <header class="section-header">
+                <h3>Sản phẩm nổi bật</h3>
+                <p>Sản phẩm chất tạo đặc dùng trong công nghiệp hóa chất và thực phẩm</p>
+            </header>
+
+            <div class="row justify-content-center">
+                @foreach (var product in Model.ProductList)
+                {
+                    <div class="col-md-6 col-lg-5 justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="box" style="text-align: center !important">
+                            @*<div class="icon"><i class="bi bi-briefcase" style="color: #ff689b;"></i></div>*@
+                            <h4 class="title">@product.Name</h4>
+                            <h5 class="title">@product.Info</h5>
+                            <img style="height:300px" src="~/assets/img/trongnuoc.jpg" />
+                            <br>
+                            <hr>
+                            <div style="padding: 10px">
+                                <a href="" style="border-radius:20px; width:150px; margin:5px" class="btn btn-success">Chi tiết</a>
+                                <a href="" style="border-radius:20px; width:150px; margin:5px" class="btn btn-primary">Đặt hàng</a>
+                            </div>
+
+                        </div>
+                    </div>
+                }
+            </div>
+
+        </div>
+    </section><!-- End Services Section -->
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="clearfix">
+        <div class="container" data-aos="fade-up">
+
+            <header class="section-header">
+                <h3 class="section-title">Thư viện ảnh</h3>
+            </header>
+            @*
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                <div class="col-lg-12">
+                <ul id="portfolio-flters">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-app">App</li>
+                <li data-filter=".filter-card">Card</li>
+                <li data-filter=".filter-web">Web</li>
+                </ul>
+                </div>
+                </div>
+            *@
+            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/app1.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="portfolio-details.html">App 1</a></h4>
+                            <p>App</p>
+                            <div>
+                                <a href="assets/img/portfolio/app1.jpg" data-gallery="portfolioGallery" title="App 1" class="portfolio-lightbox link-preview"><i class="bi bi-plus"></i></a>
+                                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/web3.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="portfolio-details.html">Web 3</a></h4>
+                            <p>Web</p>
+                            <div>
+                                <a href="assets/img/portfolio/web3.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Web 3"><i class="bi bi-plus"></i></a>
+                                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/app2.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="portfolio-details.html">App 2</a></h4>
+                            <p>App</p>
+                            <div>
+                                <a href="assets/img/portfolio/app2.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="App 2"><i class="bi bi-plus"></i></a>
+                                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/card2.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="portfolio-details.html">Card 2</a></h4>
+                            <p>Card</p>
+                            <div>
+                                <a href="assets/img/portfolio/card2.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Card 2"><i class="bi bi-plus"></i></a>
+                                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/web2.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="portfolio-details.html">Web 2</a></h4>
+                            <p>Web</p>
+                            <div>
+                                <a href="assets/img/portfolio/web2.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Web 2"><i class="bi bi-plus"></i></a>
+                                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/app3.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="portfolio-details.html">App 3</a></h4>
+                            <p>App</p>
+                            <div>
+                                <a href="assets/img/portfolio/app3.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="App 3"><i class="bi bi-plus"></i></a>
+                                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/card1.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="portfolio-details.html">Card 1</a></h4>
+                            <p>Card</p>
+                            <div>
+                                <a href="assets/img/portfolio/card1.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Card 1"><i class="bi bi-plus"></i></a>
+                                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/card3.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="portfolio-details.html">Card 3</a></h4>
+                            <p>Card</p>
+                            <div>
+                                <a href="assets/img/portfolio/card3.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Card 3"><i class="bi bi-plus"></i></a>
+                                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+                    <div class="portfolio-wrap">
+                        <img src="assets/img/portfolio/web1.jpg" class="img-fluid" alt="">
+                        <div class="portfolio-info">
+                            <h4><a href="portfolio-details.html">Web 1</a></h4>
+                            <p>Web</p>
+                            <div>
+                                <a href="assets/img/portfolio/web1.jpg" class="portfolio-lightbox link-preview" data-gallery="portfolioGallery" title="Web 1"><i class="bi bi-plus"></i></a>
+                                <a href="portfolio-details.html" class="link-details" title="More Details"><i class="bi bi-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- End Portfolio Section -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact">
+        <div class="container-fluid" data-aos="fade-up">
+
+            <div class="section-header">
+                <h3>Liên hệ với chúng tôi</h3>
+            </div>
+
+            <div class="row">
+
+                <div class="col-lg-6">
+                    <div class="map mb-4 mb-lg-0">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3725.5148547128533!2d105.7602358509274!3d20.971989285960603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x313453470c3ebf13%3A0x5e0cf11e3582ad9d!2sVANVENE!5e0!3m2!1svi!2shk!4v1650206621739!5m2!1svi!2shk" frameborder="0" style="border:0; width: 100%; height: 340px;" allowfullscreen"></iframe>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-md-5 info">
+                            <i class="bi bi-geo-alt"></i>
+                            <p>Phía bắc Thôn Đông Túc,KCN dệt may, Thành Phố Tấn Châu(Jinzhou), Hà Bắc, Trung Quốc </p>
+                        </div>
+                        <div class="col-md-4 info">
+                            <i class="bi bi-envelope"></i>
+                            <p>mtf123@126.com</p>
+                        </div>
+                        <div class="col-md-3 info">
+                            <i class="bi bi-phone"></i>
+                            <p>(+84) 931291688 <br /> (+86) 13768837702</p>
+                        </div>
+                    </div>
+
+                    <div class="form">
+                        <form asp-controller="Home" asp-action="PostFeedback" class="php-email-form">
+                            <div class="row">
+                                <div class="form-group col-lg-4">
+                                    <input id="ClientName" asp-for="CustomerFeedback.ClientName" type="text" class="form-control" placeholder="Tên của bạn" required>
+                                    <span asp-validation-for="CustomerFeedback.ClientName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-lg-4 mt-3 mt-lg-0">
+                                    <input id="Phone" asp-for="CustomerFeedback.Phone" type="text" class="form-control" placeholder="Điện thoại" required>
+                                    <span asp-validation-for="CustomerFeedback.Phone" class="text-danger"></span>
+                                </div>
+                                <div class="form-group col-lg-4 mt-3 mt-lg-0">
+                                    <input id="Email" asp-for="CustomerFeedback.Email" type="email" class="form-control" placeholder="Email" required>
+                                    <span asp-validation-for="CustomerFeedback.Email" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                <textarea id="Message" asp-for="CustomerFeedback.Message" class="form-control" rows="5" placeholder="Nội dung" required></textarea>
+                                <span asp-validation-for="CustomerFeedback.Message" class="text-danger"></span>
+                            </div>
+                            <div class="my-3">
+                                <div class="loading">Loading</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message">Your message has been sent. Thank you!</div>
+                            </div>
+                            <div class="text-center">
+                                <input id="submit" class="btn btn-primary" type="submit" value="Gửi thông điệp" title="Send Message">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Contact Section -->
+
+</div>
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}
